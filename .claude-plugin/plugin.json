@@ -1,0 +1,22 @@
+{
+  "name": "suno-music-skills",
+  "version": "0.1.0",
+  "description": "Two focused Suno skills — one for songs with lyrics, one for instrumentals. Turns a one-line idea into a paste-ready Suno prompt set, and keeps every decision revisable.",
+  "author": {
+    "name": "0x0w1"
+  },
+  "repository": "https://github.com/0x0w1/musician",
+  "license": "Apache-2.0",
+  "keywords": [
+    "suno",
+    "music",
+    "songwriting",
+    "lyrics",
+    "instrumental",
+    "prompt-engineering"
+  ],
+  "skills": [
+    "./skills/suno-vocal-song",
+    "./skills/suno-instrumental"
+  ]
+}
