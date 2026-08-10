@@ -41,6 +41,7 @@ The boundary is **"is there text to be sung?"** — nothing else. Structure tags
 - **Three fields, three jobs.** Lyrics is what gets performed. Styles is the music you want. Exclude Styles is the music you don't. Production direction never enters the lyrics box.
 - **Version dialects.** v4.5, v5, and v5.5 have identical fields and limits but listen differently, so the same slots render in different prose depending on your profile.
 - **Revisions test for contradiction, not improvement.** A change spreads only where leaving it would make the prompt contradict itself. "Would be better" is unbounded and turns every tweak into a redesign.
+- **What came back is recorded too.** A generation result arrives as an offhand sentence — *the choir keeps coming back*, *it came out too busy*. That sentence is the only evidence the system ever gets that a prompt worked, so it goes into the song file before anything is changed. A correction that repeats across three songs is a preference nobody wrote down, and you get offered the chance to write it.
 - **Artist names never reach output.** They're blocked by Suno and risk account strikes, so references are decomposed into era, genre, texture, instrumentation, and vocal character — and the translation is shown to you in one line so you can correct it before generating.
 
 ## Layout
@@ -69,9 +70,11 @@ Test inputs and a nine-point evaluation checklist are in [TESTING.md](TESTING.md
 
 ## Status
 
-v0.1.1. Two behaviors are owner-confirmed but not independently verified — see `skills/_shared/suno-reference.md` §10.
+v0.2.0. Two behaviors are owner-confirmed but not independently verified — see `skills/_shared/suno-reference.md` §10.
 
-The genre presets, BPM tables, performance notation, and syllable bands added in v0.1.1 are all `[unverified]`: adapted from an uncited third-party library and not yet checked against generated audio. They are opening values, not findings.
+The genre presets, BPM tables, performance notation, and syllable bands added in v0.1.1 are all `[unverified]`: adapted from an uncited third-party library and not yet checked against generated audio. They are opening values, not findings — and the `outcome` log added in v0.2.0 is how they stop being guesses.
+
+Song files written before v0.2.0 have no `outcome` section. Nothing breaks; the section appears the first time a result is reported.
 
 ## License
 

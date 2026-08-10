@@ -191,6 +191,10 @@ created: 2026-08-07
 ## concept
 One or two sentences of intent.
 
+## outcome            # what came back from Suno — see §10
+- 2026-08-10 — 4 takes, every one added a choir on the last chorus
+  → choir, backing vocals added to exclude; layered synth pad added to slot 3
+
 ## slots
 genre: ...
 mood: ...
@@ -234,3 +238,43 @@ Two layers. Layer 1 is for pasting, Layer 2 is for reading. Nothing else.
 **Everything else goes in the song file, not on screen.** Rationale, instrument reasoning, arrangement intent are all recorded — they are simply not printed. Printing them buries the six fields the user actually needs to copy.
 
 Do not print: BPM as its own field, vocal direction prose, arrangement explanation prose, a list of title candidates beyond one line.
+
+## 10. Outcome and diagnosis
+
+Everything above this section compiles intent into a prompt. Nothing above it can tell whether the prompt worked — that information exists only in the user's ears, and it arrives as an offhand sentence: *"보컬이 계속 남자로 나와"*, *"너무 산만해"*, *"괜찮은데 후렴이 안 살아"*.
+
+**Record it before acting on it.** A sentence like that is the only evidence this system ever gets, and without the `outcome` log the song file is a record of intentions that were never checked.
+
+### 10.1 Recording
+
+When the user reports back on a generation, append one line to `outcome` in the song file: **what was asked for → what came back → what changed in response.** Then handle the report as an ordinary revision under §7 — the contradiction test still applies, and "it came out wrong" does not license a redesign any more than "make it female vocal" does.
+
+Record the report even when nothing changes. "Three takes, all fine" is the only kind of evidence that a rule is working, and it is the kind that never gets written down.
+
+### 10.2 Diagnosis
+
+Symptom to cause to slot. Prompt-side only — everything here is something the compiler can act on.
+
+| Symptom | Likely cause | Fix |
+|---|---|---|
+| Drifted to English, or mixed languages | `singing in <language>` missing or buried | Slot 4, exactly as written (`suno-reference.md` §8) |
+| Vocal gender came out wrong | Voice Gender selector and slot 4 disagree | Both, together — one is a selector and beats prose (§7) |
+| Unrequested choir or group vocals | Suno's most common unprompted addition | Exclude **and** put something in slot 3 to carry the weight (§4) |
+| An exclusion was ignored | Exclusion is probabilistic, and the prompt still implies the element | Find what implies it in slots 1–3 and change that instead |
+| Genre came out vague — "a bit jazzy" not "jazz noir" | Genre not in position 1, or Style Influence too low | Slot 1 first; Style Influence 70–85 (§5) |
+| Strange but shapeless | Weirdness raised without a genre fence | Raise Style Influence with it (§5 coupling rule) |
+| Individual instruments not audible | More than four in slot 3; Suno averaged them | Cut to 2–4, fold the rest into slot 6 as texture |
+| Song rushed or cut off | Lyrics past ~3,000 characters — truncation is silent | Cut lyrics, not Styles (`suno-reference.md` §2) |
+| Sections ignored | Bare `[Intro]`, or a section without a tag | Specific forms, tag every section (§5.1) |
+| Descriptors seem ignored | Synonym pile — the model had nothing new to act on | Redundancy pass, collapse to the stronger term (§2) |
+| Track came out longer or shorter than wanted | Section count, not word count, is the lever | Add or cut a section |
+
+Two failures are **not** in this table because they are not the prompt's fault: audio artifacts and a buried vocal in an otherwise correct take. Those are mix problems, and the fix is Suno-side — regenerate, or use Remaster and stems. Say so and stop; do not recompile a prompt that was right.
+
+### 10.3 When a correction repeats
+
+The same correction landing in three different songs is not three revisions — it is a preference that was never written down.
+
+When it happens, say so in one line and offer to move it into the profile: a habitual exclusion belongs in `Always exclude`, a habitual instrument in `Instruments you gravitate toward`. **Offer, do not write.** The profile is the user's file, and a skill that edits it silently makes every future output harder to explain.
+
+This is the only path by which the profile's taste section ever fills in. Left alone it stays blank, and a blank taste section means the profile is doing nothing but holding a version number and a language.

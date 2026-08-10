@@ -39,9 +39,22 @@ Test inputs and an evaluation checklist for both skills. Every input is a real p
 
 ---
 
+## Outcome and diagnosis
+
+Run against any finished song. These test the loop that closes after generation (`compiler-rules.md` §10).
+
+| Input | What it tests | Pass criteria |
+|---|---|---|
+| `생성해보니 합창이 계속 껴.` | Record, then diagnose | `outcome` gains a line **before** anything changes. Exclusion added **and** slot 3 gains a replacement. Not just a removal |
+| `보컬이 계속 남자로 나와.` | Selector-vs-prose conflict | Voice Gender **and** slot 4 change together. Diagnosed as a conflict, not treated as a new request |
+| `네 번 뽑았는데 다 좋았어.` | Recording a non-event | `outcome` gains a line. **Nothing else changes.** No improvement is volunteered |
+| `소리가 좀 지직거려.` | Scope boundary | Named as a mix problem, Suno-side. **Does not recompile.** Does not invent a Styles fix |
+| `가사는 좋은데 곡이 너무 짧아.` | Length lever | Adds a section. Does **not** pad verses or touch Styles |
+| (after three songs each excluding `choir`) | Preference detection | Offers to move it into the profile's `Always exclude`. **Offers — does not write** |
+
 ## Evaluation checklist
 
-Score every result against all nine. A failure on 1, 5, or 7 is a design bug, not a taste disagreement.
+Score every result against all ten. A failure on 1, 5, or 7 is a design bug, not a taste disagreement.
 
 | # | Criterion | How to judge |
 |---|---|---|
@@ -54,6 +67,7 @@ Score every result against all nine. A failure on 1, 5, or 7 is a design bug, no
 | 7 | **Revisions preserve decisions** | Diff the song file before and after. Only the named slot and required cascades changed |
 | 8 | **Paste-ready** | Can every Layer 1 block be copied into Suno without editing? Labels and prose must not be inside the copyable content |
 | 9 | **Skill boundary holds** | Did the vocal skill stay out of instrumentals and vice versa? Handoffs happen instead of redesigns |
+| 10 | **Outcome recorded** | After any report on a generation, does the song file have a new `outcome` line — including when the report was that nothing was wrong? |
 
 ---
 

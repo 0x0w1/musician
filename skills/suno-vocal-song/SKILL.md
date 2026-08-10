@@ -107,6 +107,18 @@ Load the song file. Change the slot named. Apply the contradiction test from `co
 
 `cut the lyrics by 30%` touches Lyrics only — do not re-derive Styles.
 
+## When the user reports back
+
+A generation result arrives as a sentence — `보컬이 계속 남자로 나와`, `너무 산만해`. Handle it in this order (`compiler-rules.md` §10):
+
+1. **Append it to `outcome`** in the song file, before changing anything. Record it even when nothing needs to change.
+2. **Diagnose** against §10.2 — symptom to cause to slot.
+3. **Revise** under the ordinary §7 contradiction test. "It came out wrong" is not a licence to redesign.
+
+If the problem is a mix problem — artifacts, a buried vocal in an otherwise correct take — say so and stop. That is Suno-side, and recompiling a prompt that was already right makes the next take worse, not better.
+
+When the same correction has now landed in three songs, offer to move it into the profile. Offer only.
+
 ## Do not
 
 - Put playing technique, mixing, or production direction in the Lyrics box
@@ -115,3 +127,5 @@ Load the song file. Change the slot named. Apply the contradiction test from `co
 - Print BPM as a separate field, or restate Styles content as prose
 - Auto-recommend Weirdness ≥ 0.7
 - Regenerate the whole song in response to a targeted revision
+- Recompile a prompt when the report describes a mix problem
+- Edit the profile without being asked

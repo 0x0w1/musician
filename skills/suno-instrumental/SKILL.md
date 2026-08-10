@@ -113,6 +113,20 @@ Weirdness / Style Influence
 
 Load the song file, change the named slot, apply the contradiction test (`compiler-rules.md` §7). Fix only what would otherwise contradict; suggest the rest under `⚠️`. Preserve untouched decisions verbatim. Append to `revision_history`.
 
+## When the user reports back
+
+A generation result arrives as a sentence — `합창이 자꾸 껴`, `집중이 안 돼`. Handle it in this order (`compiler-rules.md` §10):
+
+1. **Append it to `outcome`** in the song file, before changing anything. Record it even when nothing needs to change.
+2. **Diagnose** against §10.2 — symptom to cause to slot.
+3. **Revise** under the ordinary §7 contradiction test.
+
+`집중이 안 돼` on a focus track is a dynamics failure, not a genre failure: the track probably has a climax it should not have (`references/instrumentation-and-performance.md` §4). Check the section list before touching slot 1.
+
+If the problem is a mix problem, say so and stop — that is Suno-side.
+
+When the same correction has now landed in three songs, offer to move it into the profile. Offer only.
+
 ## Do not
 
 - Write lyrics, or accept a lyrics request — hand it to `suno-vocal-song`
@@ -121,3 +135,5 @@ Load the song file, change the named slot, apply the contradiction test (`compil
 - Number every section with bar counts
 - Emit an artist or track name in any field
 - Auto-recommend Weirdness ≥ 0.7
+- Recompile a prompt when the report describes a mix problem
+- Edit the profile without being asked
