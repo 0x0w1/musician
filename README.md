@@ -50,10 +50,14 @@ skills/
 ├── _shared/
 │   ├── suno-reference.md      facts — fields, limits, tags, each tagged with verification status
 │   ├── compiler-rules.md      rules — slots, budget, exclusions, sliders, guardrails, revisions
+│   ├── genre-presets.md       opening slot values for 44 genres
+│   ├── bpm-by-use-case.md     opening BPM by what the track is for
 │   └── profile.template.md    taste — the one file you swap when handing this to someone else
 ├── suno-vocal-song/
 └── suno-instrumental/
 ```
+
+The two lookup tables are consulted at the step that needs them, not loaded on every run.
 
 Everything except `profile.template.md` is neutral. Personal taste lives in the profile, which is why this is shareable as-is.
 
@@ -65,7 +69,9 @@ Test inputs and a nine-point evaluation checklist are in [TESTING.md](TESTING.md
 
 ## Status
 
-v0.1.0. Two behaviors are owner-confirmed but not independently verified — see `skills/_shared/suno-reference.md` §10.
+v0.1.1. Two behaviors are owner-confirmed but not independently verified — see `skills/_shared/suno-reference.md` §10.
+
+The genre presets, BPM tables, performance notation, and syllable bands added in v0.1.1 are all `[unverified]`: adapted from an uncited third-party library and not yet checked against generated audio. They are opening values, not findings.
 
 ## License
 

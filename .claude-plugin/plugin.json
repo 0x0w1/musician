@@ -1,6 +1,6 @@
 {
   "name": "suno-music-skills",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Two focused Suno skills — one for songs with lyrics, one for instrumentals. Turns a one-line idea into a paste-ready Suno prompt set, and keeps every decision revisable.",
   "author": {
     "name": "0x0w1"

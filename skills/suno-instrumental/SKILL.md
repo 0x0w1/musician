@@ -13,6 +13,10 @@ Take a scene, a use case, or a feeling and return a Suno prompt set for a track 
 - `references/instrumentation-and-performance.md` — instrumentation, technique, arrangement
 - The profile at `~/.claude/suno/profile.md` (create from `../_shared/profile.template.md` if missing)
 
+**Look up when the step calls for it, not up front:**
+- `../_shared/genre-presets.md` — opening slot values by genre (step 2)
+- `../_shared/bpm-by-use-case.md` — opening BPM by what the track is for (step 3)
+
 ## Boundary
 
 This skill handles music with **no text to be sung**. If the user wants lyrics, say so and point to `suno-vocal-song` — do not write a song here.

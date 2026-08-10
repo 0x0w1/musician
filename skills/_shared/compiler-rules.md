@@ -40,6 +40,18 @@ Styles is assembled from fixed slots in fixed order. **Never free-write the Styl
 | 6 | production character | optional | optional |
 | 7 | BPM | optional, always last | optional, always last |
 
+### Starting values
+
+`genre-presets.md` holds opening slot values for 44 genres. Load the nearest one, then replace whatever the concept determines — a preset that survives untouched means the concept was never resolved. The redundancy pass still runs afterwards: preset descriptors meeting concept descriptors is exactly how a synonym-pile forms.
+
+Presets are a shortcut through slot *assembly*, never a shortcut around it. A preset string is not an output string.
+
+### Choosing the BPM
+
+Slot 7 is a number, and a number picked from nothing is worse than no number at all. Take the opening value from `bpm-by-use-case.md` — indexed by what the track is *for*, which is what the user actually told you — then let the genre preset and the concept move it.
+
+When the perceived tempo differs from the stated one, put the feel in slot 5 and leave slot 7 honest: `half-time feel, 140 BPM`. Do not average the two into a number that describes neither.
+
 ### Budget
 
 - **≤ 350 characters.**

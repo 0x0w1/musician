@@ -74,14 +74,17 @@ Suno's CTO's top recommendation: **do not rerun v4/v4.5 prompts on v5** — v5 l
 
 ## 5. Tag taxonomy — what goes where
 
-Four distinct layers. Confusing them is the single most common failure.
+Five distinct layers. Confusing them is the single most common failure.
 
 | Layer | Lives in | Examples | Discipline |
 |---|---|---|---|
 | **Structure tags** | Lyrics | `[Verse 1]` `[Chorus]` `[Bridge]` `[Interlude]` `[Outro]` | Required on every section |
 | **Delivery bracket tags** | Lyrics | `[Whispered]` `[Spoken]` `[Vulnerable]` `[Shout]` | Accent only — 1–3 per section max |
+| **Performance notation** | Lyrics | `SHOUTED` `(backing)` `~held~` `cut-` | Plain text on the sung line itself — §5.5 |
 | **Style descriptors** | Styles | `gravelly` `melismatic` `belting` `spacious reverb` | Comma prose, never bracketed |
 | **Inline metatags** | Lyrics | `[Verse 1: raspy older female, husky contralto]` | **Escalation only**, never a default |
+
+**The Lyrics box holds four of these five, and that is the whole reason it goes wrong.** What separates them is not the bracket — it is Axis 1 in `compiler-rules.md` §1: does a human make this sound? `[Whispered]` and `SHOUTED` describe a human making a sound, so they belong. `[Instrument: Piano]` and `[Texture: Tape-Saturated]` do not — those are slot 3 and slot 6 wearing brackets, and putting them here means the same instruction is now competing with itself across two fields.
 
 ### 5.1 Structure tags
 
@@ -96,6 +99,14 @@ Four distinct layers. Confusing them is the single most common failure.
 ```
 
 **Trap: bare `[Intro]` is notoriously unreliable** `[verified]`. Always use a specific form — `[Short Instrumental Intro]`, `[Intro - Spoken]`.
+
+**Emotion-fused structure tags** `[unverified]` — a mood folded into the section tag itself:
+
+```
+[Sad Verse]  [Angry Verse]  [Whimsical Verse]  [Hopeful Chorus]  [Melancholic Bridge]
+```
+
+This is the same shape as `[Catchy Verse]` and `[Catchy Hook]` above: **one tag, not a stack.** It is a legitimate way to mark a section whose emotion departs from the track's overall mood — the second verse of a song that turns. It is not a licence to open every section with a mood tag; Styles already sets the track's mood, and repeating it per section spends attention on something already said.
 
 ### 5.2 Bar count targeting `[unverified]`
 
@@ -121,6 +132,40 @@ Treated as targets, not guarantees. Single-source claim — use sparingly, mainl
 **Texture:** `whispered` `gravelly` `velvety` `dreamy` `resonant` `nasal` `brassy` `smoky` `breathy exhale` `rough-edged` `shimmery` `glassy` `crunchy` `chilled`
 
 **Processing:** `spacious reverb` `slapback delay` `auto-tuned` `natural pitch` `vocoded` `distorted vocals` `telephone effect`
+
+### 5.5 Performance notation `[unverified]`
+
+Marks applied to the sung line itself, with no bracket and no tag. This is the only per-word control available — every bracket tag is per-section and every Styles descriptor is per-track.
+
+| Notation | Effect |
+|---|---|
+| `UPPERCASE` | Shouted or emphasised |
+| `(text in parentheses)` | Backing vocal or harmony |
+| A line repeated verbatim | Sung as a loop |
+| `~word~` | Note held long |
+| `word-` | Cut off abruptly |
+
+```
+This is OUR time, this is our time
+(our time, our time)
+I never said good-
+```
+
+`(parentheses)` is the well-attested one and is already how ad-libs are written. The other four come from a single third-party source and none has been checked against audio — use them where the effect is worth losing if it silently does nothing, and never as the only thing carrying a moment.
+
+**Uppercase is the one to watch.** It looks free but it is not: an all-caps chorus reads as a chorus with no dynamic range. Emphasise words, not sections.
+
+### 5.6 Other bracket tags `[unverified]`
+
+```
+[modulate up a key]    [modulate down a key]    [loop-friendly]    [crowd sings]
+```
+
+- `[modulate up a key]` before a final chorus is a real songwriting device and there is no other way to ask for it — Styles has no vocabulary for a key change.
+- `[loop-friendly]` matters for background and focus tracks, where the track will run on repeat and a distinct ending becomes a defect. Pairs with `[Fade Out]`, not against it.
+- `[crowd sings]` produces group vocals on purpose. Note this is the element Suno adds *unprompted* more than any other (§6) — the tag is only useful when you also want it there and nowhere else.
+
+Single-source, all four. Worth testing before any of them becomes a default.
 
 ## 6. Exclude Styles `[verified]`
 
@@ -178,5 +223,6 @@ Both were confirmed by the repo owner on 2026-08-07 and **not independently veri
 - [Character limits by model](https://hookgenius.app/learn/suno-character-limits/) · [Prompt guide 2026](https://hookgenius.app/learn/suno-prompt-guide-2026/) · [Lyrics formatting](https://hookgenius.app/learn/suno-lyrics-formatting/)
 - [Negative prompting guide](https://jackrighteous.com/blogs/guides-using-suno-ai-music-creation/negative-prompting-suno-v5-guide) · [Multilingual & pronunciation](https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/suno-v5-multilingual-english-pronunciation-guide)
 - [bitwize-music-studio/claude-ai-music-skills](https://github.com/bitwize-music-studio/claude-ai-music-skills) — v5 best practices, structure tags, voice tags
+- [schwepps/skills — suno-music-creator](https://github.com/schwepps/skills) (MIT) — source for §5.5 performance notation, §5.6 bracket tags, the emotion-fused structure tags in §5.1, `bpm-by-use-case.md`, and the 40 genres decomposed in `genre-presets.md`. Carries no citations of its own; everything taken from it is tagged `[unverified]`
 - [v5 vs v4.5 vs v5.5 comparison](https://acetaggen.com/blog/suno-v5-vs-v4-complete-comparison) · [Prompt order testing](https://travisnicholson.medium.com/how-to-write-better-suno-ai-prompts-50-examples-b362d325d5ef)
 - [Artist style without naming](https://roo.beehiiv.com/p/suno-artist-style-prompts) · [Content filter](https://hookgenius.app/learn/suno-content-filter-blocked-words/)

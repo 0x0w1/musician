@@ -14,6 +14,32 @@ Detail for `suno-vocal-song`. Tag inventories live in `../../_shared/suno-refere
 
 Line length follows the language. Korean and Japanese carry less information per syllable than English, so a line that fits a melody in English runs short in translation — write to the *melodic* line, not the word count.
 
+### Syllables per line `[unverified]`
+
+Write to the melodic line, then check it against a number. Too many syllables and Suno crowds them into the bar; too few and it stretches vowels to fill.
+
+| Language | Syllables per line | Basis |
+|---|---|---|
+| English | 6–12 | Third-party guide, uncited |
+| Korean | 8–15 | Inferred, not measured |
+| Japanese | 10–18 (mora) | Inferred, not measured |
+
+**Only the English band has a source, and it is a weak one.** The other two are reasoned from the density difference stated above, not observed: the same melodic phrase needs more Korean syllables than English to say the same thing, and more Japanese mora again. Treat them as a sanity check on an outlier line, never as a target to write toward — a line at 20 Korean syllables is worth a second look; a line at 14 is not a problem.
+
+The band is a **check, not a constraint.** Irregular line lengths are what make phrasing conversational (§5); a lyric where every line lands in the middle of the band reads mechanical.
+
+### Sections and duration `[unverified]`
+
+Section count is the main lever on length — the Lyrics box has no duration field.
+
+| Structure | Approximate length |
+|---|---|
+| 2 verses + 2 choruses | 2–3 min |
+| + bridge + outro | 3–4 min |
+| Ceiling | 8 min per generation |
+
+`[Instrumental]` and `[Instrumental Break]` add time without adding words, which is the tool for a song that runs short — not padding the verses. Bar counts (`[Instrumental 8]`) apply here under the §5.2 caveat: a target, not a guarantee.
+
 ## 2. Structure
 
 Default: `Intro → Verse 1 → Chorus → Verse 2 → Chorus → Bridge → Chorus → Outro`.
@@ -37,6 +63,11 @@ The Lyrics box holds **what is performed** and nothing else.
 | `(ooh)`, `(one more time)` — ad-libs as parenthetical text | `humming` as a general tendency |
 | `[Whispered]` at an emotional turn | `spacious reverb`, `auto-tuned` |
 | `[Short Instrumental Intro]` | `fingerpicked acoustic`, `analog tape warmth` |
+| `THIS IS OUR TIME` — one shouted phrase | `shouted` as the whole song's delivery |
+
+**Performance notation** (`../../_shared/suno-reference.md` §5.5) is the third thing the Lyrics box holds, after the words and the tags: `UPPERCASE` for emphasis, `(parentheses)` for backing vocals, `~held~`, `cut-`. It is the only per-*word* control that exists — every bracket tag is per-section, every Styles descriptor is per-track. Spend it on the one or two words a line turns on.
+
+It is also the easiest thing here to overdo. An all-caps chorus is a chorus with no dynamic range left to give.
 
 **Delivery tags: 2–3 in the entire song, at most one per section.** They are the only per-section control available — Styles applies to the whole track — so spend them where the song actually turns. Stacking them causes the same attention dilution as a synonym-pile in Styles.
 

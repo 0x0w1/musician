@@ -63,3 +63,19 @@ Two behaviors are owner-confirmed but not independently verified (`skills/_share
 
 1. `Instrumental: ON` still honors structure tags in the Lyrics box
 2. `Instrumental: OFF` with no sung text produces wordless voice without Suno inventing lyrics
+
+### Added in v0.1.1 — untested against audio
+
+Everything below came from an uncited third-party library and none of it has been heard. Ranked by how much breaks if it turns out to be wrong:
+
+| # | Assumption | Where | If wrong |
+|---|---|---|---|
+| 3 | `~word~` holds a note, `word-` cuts off, `UPPERCASE` shouts | reference §5.5 | Ignored silently — cosmetic loss |
+| 4 | `[loop-friendly]` produces a seamless loop | reference §5.6 | Background tracks keep a seam; no other harm |
+| 5 | `[modulate up a key]` performs a key change | reference §5.6 | No other way to ask; feature simply absent |
+| 6 | Emotion-fused section tags (`[Sad Verse]`) are honored | reference §5.1 | Falls back to a plain section tag |
+| 7 | 6–12 syllables/line is the English alignment band | lyrics-and-vocals §1 | Lines crowd or stretch; the Korean and Japanese bands are inferred from this one and fall with it |
+| 8 | Section count maps to duration as stated | lyrics-and-vocals §1, instrumentation §3 | Songs land long or short |
+| 9 | Genre presets describe their genres accurately | genre-presets.md | Wrong opening values — but every preset is meant to be overwritten by the concept, so this degrades rather than breaks |
+
+Test 3 is the cheapest to check and covers four claims at once: generate one song with all four notations on known lines and listen for each.

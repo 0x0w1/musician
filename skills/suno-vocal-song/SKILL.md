@@ -13,6 +13,10 @@ Take a short idea and return a Suno prompt set that can be pasted without editin
 - `references/lyrics-and-vocals.md` — lyrics and vocal design
 - The profile at `~/.claude/suno/profile.md` (create from `../_shared/profile.template.md` if missing)
 
+**Look up when the step calls for it, not up front:**
+- `../_shared/genre-presets.md` — opening slot values by genre (step 4)
+- `../_shared/bpm-by-use-case.md` — opening BPM by what the track is for (step 4, slot 7)
+
 ## Boundary
 
 This skill handles songs **with text to be sung**. If the request has no sung text — background music, a focus track, ambient — say so and point to `suno-instrumental`. **Do not redesign the request to fit this skill.** Two skills that quietly do each other's work have no boundary.

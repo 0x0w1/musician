@@ -56,7 +56,11 @@ A common shape:
 
 **Bar counts only where length matters** — intro and outro. Numbering every section is the "excessive timestamp instruction" failure: it reads as precision but Suno treats the numbers as approximate targets, so the extra specificity buys nothing and crowds the box.
 
+**Length** `[unverified]`: four sections runs roughly 2–3 minutes, six with an extended intro and outro roughly 3–4. The ceiling is 8 minutes per generation. Section count is the only real lever — there is no duration field.
+
 **Motif discipline:** one main motif, introduced early, varied at least once. Two competing motifs in a 3-minute instrumental read as two unfinished tracks.
+
+**Looping:** a track built for background or focus will run on repeat, where a defined ending becomes a seam. `[loop-friendly]` (`../../_shared/suno-reference.md` §5.6) asks for a seamless join and pairs with `[Fade Out]` rather than competing with it. Single-source and untested — worth trying on exactly the use cases §4 already flags for repeat listening.
 
 ## 4. Dynamics
 
