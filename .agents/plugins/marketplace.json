@@ -1,0 +1,20 @@
+{
+  "name": "musician",
+  "interface": {
+    "displayName": "Musician"
+  },
+  "plugins": [
+    {
+      "name": "suno-music-skills",
+      "source": {
+        "source": "local",
+        "path": "./plugins/suno-music-skills"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

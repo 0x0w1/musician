@@ -1,0 +1,1081 @@
+[
+  {
+    "title": "Begin Again",
+    "skill": "suno-vocal-song",
+    "concept": "A restrained dawn track about beginning again.",
+    "source_model": null,
+    "target_model": "v6",
+    "mode": "custom",
+    "vocal_state": "lyrics",
+    "slots": {
+      "genre": "Korean indie pop",
+      "mood": "quiet hope",
+      "instrumentation": "electric piano, soft synth pad",
+      "vocal": "clear alto",
+      "rhythm": "unhurried",
+      "production": "warm, close",
+      "bpm": 78
+    },
+    "sections": [
+      "Intro",
+      "Theme",
+      "Variation",
+      "Outro"
+    ],
+    "target_duration": "about 3 minutes",
+    "fields": {
+      "requested_model": {
+        "status": "set",
+        "value": "v6",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "source_model": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "target_model": {
+        "status": "set",
+        "value": "v6",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "availability": {
+        "status": "set",
+        "value": "current",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "mode": {
+        "status": "set",
+        "value": "custom",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "vocal_state": {
+        "status": "set",
+        "value": "lyrics",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "title": {
+        "status": "set",
+        "value": "Begin Again",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "prompt": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "lyrics": {
+        "status": "set",
+        "value": "[Verse]\n젖은 창에 아침이 와\n멈춘 발을 다시 옮겨\n[Chorus]\n천천히 다시 시작해\n내일의 나를 향해",
+        "note": "Performed text only; leave blank for voice-free or wordless example."
+      },
+      "styles": {
+        "status": "set",
+        "value": "Korean indie pop, electric piano, soft pad, clear alto singing in Korean, restrained hopeful delivery, 78 BPM",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "exclude_styles": {
+        "status": "set",
+        "value": "spoken word",
+        "note": "Paste only if a dedicated Exclude field exists; otherwise include constraint in Styles."
+      },
+      "instrumental": {
+        "status": "set",
+        "value": "OFF",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "vocal_gender": {
+        "status": "unverified",
+        "value": null,
+        "note": "Account UI not inspected; preserve current setting."
+      },
+      "weirdness": {
+        "status": "unverified",
+        "value": 50,
+        "note": "Suggested percentage only if the current UI exposes this control."
+      },
+      "style_influence": {
+        "status": "unverified",
+        "value": 70,
+        "note": "Suggested percentage only if the current UI exposes this control."
+      },
+      "audio_influence": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "variety": {
+        "status": "unverified",
+        "value": 0,
+        "note": "Suggested if exposed; preserves authored style tags."
+      },
+      "max_mode": {
+        "status": "unverified",
+        "value": false,
+        "note": "OFF suggestion; extra-cost option not enabled."
+      },
+      "voice": {
+        "status": "empty",
+        "value": null,
+        "note": "No account resource supplied."
+      },
+      "style_persona": {
+        "status": "empty",
+        "value": null,
+        "note": "No account resource supplied."
+      },
+      "custom_model": {
+        "status": "empty",
+        "value": null,
+        "note": "No account resource supplied."
+      },
+      "personalize": {
+        "status": "unverified",
+        "value": null,
+        "note": "Account UI not inspected; preserve current setting."
+      },
+      "reference_inputs": {
+        "status": "empty",
+        "value": null,
+        "note": "No source inputs."
+      },
+      "edit_target": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "preserve": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "sections": {
+        "status": "set",
+        "value": [
+          "Intro",
+          "Theme",
+          "Variation",
+          "Outro"
+        ],
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "target_duration": {
+        "status": "set",
+        "value": "about 3 minutes",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "translation": {
+        "status": "empty",
+        "value": null,
+        "note": "No review translation requested."
+      }
+    },
+    "lyrics": "[Verse]\n젖은 창에 아침이 와\n멈춘 발을 다시 옮겨\n[Chorus]\n천천히 다시 시작해\n내일의 나를 향해",
+    "translation": "",
+    "references": [],
+    "assumptions": [
+      "Illustrative fixture. No audio generated or UI inspected."
+    ]
+  },
+  {
+    "title": "Dawn Reading",
+    "skill": "suno-instrumental",
+    "concept": "A restrained dawn track about beginning again.",
+    "source_model": null,
+    "target_model": "v6-mini",
+    "mode": "custom",
+    "vocal_state": "instrumental",
+    "slots": {
+      "genre": "ambient electronic",
+      "mood": "quiet hope",
+      "instrumentation": "electric piano, soft synth pad",
+      "vocal": null,
+      "rhythm": "unhurried",
+      "production": "warm, close",
+      "bpm": 78
+    },
+    "sections": [
+      "Intro",
+      "Theme",
+      "Variation",
+      "Outro"
+    ],
+    "target_duration": "about 3 minutes",
+    "fields": {
+      "requested_model": {
+        "status": "set",
+        "value": "v6-mini",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "source_model": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "target_model": {
+        "status": "set",
+        "value": "v6-mini",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "availability": {
+        "status": "set",
+        "value": "current",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "mode": {
+        "status": "set",
+        "value": "custom",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "vocal_state": {
+        "status": "set",
+        "value": "instrumental",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "title": {
+        "status": "set",
+        "value": "Dawn Reading",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "prompt": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "lyrics": {
+        "status": "empty",
+        "value": null,
+        "note": "Performed text only; leave blank for voice-free or wordless example."
+      },
+      "styles": {
+        "status": "set",
+        "value": "Ambient electronic, electric piano and evolving synth pad, restrained steady dynamics, 78 BPM",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "exclude_styles": {
+        "status": "set",
+        "value": "vocals, spoken word",
+        "note": "Paste only if a dedicated Exclude field exists; otherwise include constraint in Styles."
+      },
+      "instrumental": {
+        "status": "set",
+        "value": "ON",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "vocal_gender": {
+        "status": "unverified",
+        "value": null,
+        "note": "Account UI not inspected; preserve current setting."
+      },
+      "weirdness": {
+        "status": "unverified",
+        "value": 50,
+        "note": "Suggested percentage only if the current UI exposes this control."
+      },
+      "style_influence": {
+        "status": "unverified",
+        "value": 70,
+        "note": "Suggested percentage only if the current UI exposes this control."
+      },
+      "audio_influence": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "variety": {
+        "status": "unverified",
+        "value": 0,
+        "note": "Suggested if exposed; preserves authored style tags."
+      },
+      "max_mode": {
+        "status": "unverified",
+        "value": false,
+        "note": "OFF suggestion; extra-cost option not enabled."
+      },
+      "voice": {
+        "status": "empty",
+        "value": null,
+        "note": "No account resource supplied."
+      },
+      "style_persona": {
+        "status": "empty",
+        "value": null,
+        "note": "No account resource supplied."
+      },
+      "custom_model": {
+        "status": "empty",
+        "value": null,
+        "note": "No account resource supplied."
+      },
+      "personalize": {
+        "status": "unverified",
+        "value": null,
+        "note": "Account UI not inspected; preserve current setting."
+      },
+      "reference_inputs": {
+        "status": "empty",
+        "value": null,
+        "note": "No source inputs."
+      },
+      "edit_target": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "preserve": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "sections": {
+        "status": "set",
+        "value": [
+          "Intro",
+          "Theme",
+          "Variation",
+          "Outro"
+        ],
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "target_duration": {
+        "status": "set",
+        "value": "about 3 minutes",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "translation": {
+        "status": "empty",
+        "value": null,
+        "note": "No review translation requested."
+      }
+    },
+    "lyrics": "",
+    "translation": "",
+    "references": [],
+    "assumptions": [
+      "Illustrative fixture. No audio generated or UI inspected."
+    ]
+  },
+  {
+    "title": "Wordless Dawn",
+    "skill": "suno-instrumental",
+    "concept": "A restrained dawn track about beginning again.",
+    "source_model": null,
+    "target_model": "v6-wild",
+    "mode": "custom",
+    "vocal_state": "wordless",
+    "slots": {
+      "genre": "ambient electronic",
+      "mood": "quiet hope",
+      "instrumentation": "electric piano, soft synth pad",
+      "vocal": "wordless humming",
+      "rhythm": "unhurried",
+      "production": "warm, close",
+      "bpm": 78
+    },
+    "sections": [
+      "Intro",
+      "Theme",
+      "Variation",
+      "Outro"
+    ],
+    "target_duration": "about 3 minutes",
+    "fields": {
+      "requested_model": {
+        "status": "set",
+        "value": "v6-wild",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "source_model": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "target_model": {
+        "status": "set",
+        "value": "v6-wild",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "availability": {
+        "status": "set",
+        "value": "current",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "mode": {
+        "status": "set",
+        "value": "custom",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "vocal_state": {
+        "status": "set",
+        "value": "wordless",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "title": {
+        "status": "set",
+        "value": "Wordless Dawn",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "prompt": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "lyrics": {
+        "status": "empty",
+        "value": null,
+        "note": "Performed text only; leave blank for voice-free or wordless example."
+      },
+      "styles": {
+        "status": "set",
+        "value": "Ambient electronic, electric piano and evolving synth pad, restrained steady dynamics, 78 BPM, wordless humming, no sung words",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "exclude_styles": {
+        "status": "set",
+        "value": "spoken word",
+        "note": "Paste only if a dedicated Exclude field exists; otherwise include constraint in Styles."
+      },
+      "instrumental": {
+        "status": "set",
+        "value": "OFF",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "vocal_gender": {
+        "status": "unverified",
+        "value": null,
+        "note": "Account UI not inspected; preserve current setting."
+      },
+      "weirdness": {
+        "status": "unverified",
+        "value": 50,
+        "note": "Suggested percentage only if the current UI exposes this control."
+      },
+      "style_influence": {
+        "status": "unverified",
+        "value": 70,
+        "note": "Suggested percentage only if the current UI exposes this control."
+      },
+      "audio_influence": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "variety": {
+        "status": "unverified",
+        "value": 0,
+        "note": "Suggested if exposed; preserves authored style tags."
+      },
+      "max_mode": {
+        "status": "unverified",
+        "value": false,
+        "note": "OFF suggestion; extra-cost option not enabled."
+      },
+      "voice": {
+        "status": "empty",
+        "value": null,
+        "note": "No account resource supplied."
+      },
+      "style_persona": {
+        "status": "empty",
+        "value": null,
+        "note": "No account resource supplied."
+      },
+      "custom_model": {
+        "status": "empty",
+        "value": null,
+        "note": "No account resource supplied."
+      },
+      "personalize": {
+        "status": "unverified",
+        "value": null,
+        "note": "Account UI not inspected; preserve current setting."
+      },
+      "reference_inputs": {
+        "status": "empty",
+        "value": null,
+        "note": "No source inputs."
+      },
+      "edit_target": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "preserve": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "sections": {
+        "status": "set",
+        "value": [
+          "Intro",
+          "Theme",
+          "Variation",
+          "Outro"
+        ],
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "target_duration": {
+        "status": "set",
+        "value": "about 3 minutes",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "translation": {
+        "status": "empty",
+        "value": null,
+        "note": "No review translation requested."
+      }
+    },
+    "lyrics": "",
+    "translation": "",
+    "references": [],
+    "assumptions": [
+      "Illustrative fixture. No audio generated or UI inspected."
+    ]
+  },
+  {
+    "title": "Simple Dawn",
+    "skill": "suno-instrumental",
+    "concept": "A restrained dawn track about beginning again.",
+    "source_model": null,
+    "target_model": "v6-mini",
+    "mode": "simple",
+    "vocal_state": "instrumental",
+    "slots": {
+      "genre": "ambient electronic",
+      "mood": "quiet hope",
+      "instrumentation": "electric piano, soft synth pad",
+      "vocal": null,
+      "rhythm": "unhurried",
+      "production": "warm, close",
+      "bpm": 78
+    },
+    "sections": [
+      "Intro",
+      "Theme",
+      "Variation",
+      "Outro"
+    ],
+    "target_duration": "about 3 minutes",
+    "fields": {
+      "requested_model": {
+        "status": "set",
+        "value": "v6-mini",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "source_model": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "target_model": {
+        "status": "set",
+        "value": "v6-mini",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "availability": {
+        "status": "set",
+        "value": "current",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "mode": {
+        "status": "set",
+        "value": "simple",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "vocal_state": {
+        "status": "set",
+        "value": "instrumental",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "title": {
+        "status": "set",
+        "value": "Simple Dawn",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "prompt": {
+        "status": "set",
+        "value": "Create an unhurried ambient track for dawn reading with electric piano and soft pads. No voices or spoken words. Keep the energy steady.",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "lyrics": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "No sung text."
+      },
+      "styles": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Musical direction is included in Prompt."
+      },
+      "exclude_styles": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Exclusions are included in Prompt."
+      },
+      "instrumental": {
+        "status": "set",
+        "value": "ON",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "vocal_gender": {
+        "status": "unverified",
+        "value": null,
+        "note": "Account UI not inspected; preserve current setting."
+      },
+      "weirdness": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "style_influence": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "audio_influence": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "variety": {
+        "status": "unverified",
+        "value": 0,
+        "note": "Suggested if exposed; preserves authored style tags."
+      },
+      "max_mode": {
+        "status": "unverified",
+        "value": false,
+        "note": "OFF suggestion; extra-cost option not enabled."
+      },
+      "voice": {
+        "status": "empty",
+        "value": null,
+        "note": "No account resource supplied."
+      },
+      "style_persona": {
+        "status": "empty",
+        "value": null,
+        "note": "No account resource supplied."
+      },
+      "custom_model": {
+        "status": "empty",
+        "value": null,
+        "note": "No account resource supplied."
+      },
+      "personalize": {
+        "status": "unverified",
+        "value": null,
+        "note": "Account UI not inspected; preserve current setting."
+      },
+      "reference_inputs": {
+        "status": "empty",
+        "value": null,
+        "note": "No source inputs."
+      },
+      "edit_target": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "preserve": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "sections": {
+        "status": "set",
+        "value": [
+          "Intro",
+          "Theme",
+          "Variation",
+          "Outro"
+        ],
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "target_duration": {
+        "status": "set",
+        "value": "about 3 minutes",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "translation": {
+        "status": "empty",
+        "value": null,
+        "note": "No review translation requested."
+      }
+    },
+    "lyrics": "",
+    "translation": "",
+    "references": [],
+    "assumptions": [
+      "Illustrative fixture. No audio generated or UI inspected."
+    ]
+  },
+  {
+    "title": "Chorus Revision",
+    "skill": "suno-vocal-song",
+    "concept": "A restrained dawn track about beginning again.",
+    "source_model": "v5.5",
+    "target_model": "v6",
+    "mode": "edit",
+    "vocal_state": "lyrics",
+    "slots": {
+      "genre": "Korean indie pop",
+      "mood": "quiet hope",
+      "instrumentation": "electric piano, soft synth pad",
+      "vocal": "clear alto",
+      "rhythm": "unhurried",
+      "production": "warm, close",
+      "bpm": 78
+    },
+    "sections": [
+      "Intro",
+      "Theme",
+      "Variation",
+      "Outro"
+    ],
+    "target_duration": "about 3 minutes",
+    "fields": {
+      "requested_model": {
+        "status": "set",
+        "value": "v6",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "source_model": {
+        "status": "set",
+        "value": "v5.5",
+        "note": "Original generation model."
+      },
+      "target_model": {
+        "status": "set",
+        "value": "v6",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "availability": {
+        "status": "set",
+        "value": "current",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "mode": {
+        "status": "set",
+        "value": "edit",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "vocal_state": {
+        "status": "set",
+        "value": "lyrics",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "title": {
+        "status": "set",
+        "value": "Chorus Revision",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "prompt": {
+        "status": "set",
+        "value": "In the first chorus of the attached source song, replace only its first lyric line with 천천히 다시 시작해. Preserve melody, timing, instruments, and all other lyrics.",
+        "note": "Illustrative fixture; use a real user-supplied source for an actual handoff."
+      },
+      "lyrics": {
+        "status": "set",
+        "value": "천천히 다시 시작해",
+        "note": "Illustrative fixture; use a real user-supplied source for an actual handoff."
+      },
+      "styles": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Musical direction is included in Prompt."
+      },
+      "exclude_styles": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Exclusions are included in Prompt."
+      },
+      "instrumental": {
+        "status": "set",
+        "value": "OFF",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "vocal_gender": {
+        "status": "unverified",
+        "value": null,
+        "note": "Account UI not inspected; preserve current setting."
+      },
+      "weirdness": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "style_influence": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "audio_influence": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "variety": {
+        "status": "unverified",
+        "value": 0,
+        "note": "Suggested if exposed; preserves authored style tags."
+      },
+      "max_mode": {
+        "status": "unverified",
+        "value": false,
+        "note": "OFF suggestion; extra-cost option not enabled."
+      },
+      "voice": {
+        "status": "empty",
+        "value": null,
+        "note": "No account resource supplied."
+      },
+      "style_persona": {
+        "status": "empty",
+        "value": null,
+        "note": "No account resource supplied."
+      },
+      "custom_model": {
+        "status": "empty",
+        "value": null,
+        "note": "No account resource supplied."
+      },
+      "personalize": {
+        "status": "unverified",
+        "value": null,
+        "note": "Account UI not inspected; preserve current setting."
+      },
+      "reference_inputs": {
+        "status": "set",
+        "value": [
+          {
+            "id": "user-supplied-song",
+            "role": "source recording"
+          }
+        ],
+        "note": "Illustrative fixture; use a real user-supplied source for an actual handoff."
+      },
+      "edit_target": {
+        "status": "set",
+        "value": "user-supplied-song, first chorus, replace the first lyric line",
+        "note": "Illustrative fixture; use a real user-supplied source for an actual handoff."
+      },
+      "preserve": {
+        "status": "set",
+        "value": "melody, timing, instruments, and all other lyrics",
+        "note": "Illustrative fixture; use a real user-supplied source for an actual handoff."
+      },
+      "sections": {
+        "status": "set",
+        "value": [
+          "Intro",
+          "Theme",
+          "Variation",
+          "Outro"
+        ],
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "target_duration": {
+        "status": "set",
+        "value": "about 3 minutes",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "translation": {
+        "status": "empty",
+        "value": null,
+        "note": "No review translation requested."
+      }
+    },
+    "lyrics": "천천히 다시 시작해",
+    "translation": "",
+    "references": [
+      {
+        "id": "user-supplied-song",
+        "role": "source recording"
+      }
+    ],
+    "assumptions": [
+      "Illustrative fixture. No audio generated or UI inspected.",
+      "The source identifier is illustrative, not a live song URL."
+    ]
+  },
+  {
+    "title": "Historical Dawn",
+    "skill": "suno-instrumental",
+    "concept": "A restrained dawn track about beginning again.",
+    "source_model": null,
+    "target_model": "v5.5",
+    "mode": "custom",
+    "vocal_state": "instrumental",
+    "slots": {
+      "genre": "ambient electronic",
+      "mood": "quiet hope",
+      "instrumentation": "electric piano, soft synth pad",
+      "vocal": null,
+      "rhythm": "unhurried",
+      "production": "warm, close",
+      "bpm": 78
+    },
+    "sections": [
+      "Intro",
+      "Theme",
+      "Variation",
+      "Outro"
+    ],
+    "target_duration": "about 3 minutes",
+    "fields": {
+      "requested_model": {
+        "status": "set",
+        "value": "v5.5",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "source_model": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "target_model": {
+        "status": "set",
+        "value": "v5.5",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "availability": {
+        "status": "set",
+        "value": "retired",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "mode": {
+        "status": "set",
+        "value": "custom",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "vocal_state": {
+        "status": "set",
+        "value": "instrumental",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "title": {
+        "status": "set",
+        "value": "Historical Dawn",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "prompt": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "lyrics": {
+        "status": "empty",
+        "value": null,
+        "note": "Performed text only; leave blank for voice-free or wordless example."
+      },
+      "styles": {
+        "status": "set",
+        "value": "Ambient electronic, electric piano and evolving synth pad, restrained steady dynamics, 78 BPM",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "exclude_styles": {
+        "status": "set",
+        "value": "vocals, spoken word",
+        "note": "Paste only if a dedicated Exclude field exists; otherwise include constraint in Styles."
+      },
+      "instrumental": {
+        "status": "set",
+        "value": "ON",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "vocal_gender": {
+        "status": "unverified",
+        "value": null,
+        "note": "Account UI not inspected; preserve current setting."
+      },
+      "weirdness": {
+        "status": "unverified",
+        "value": 50,
+        "note": "Suggested percentage only if the current UI exposes this control."
+      },
+      "style_influence": {
+        "status": "unverified",
+        "value": 70,
+        "note": "Suggested percentage only if the current UI exposes this control."
+      },
+      "audio_influence": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "variety": {
+        "status": "unavailable",
+        "value": null,
+        "note": "This is a v6 control; this record is historical."
+      },
+      "max_mode": {
+        "status": "unavailable",
+        "value": null,
+        "note": "This is a v6 control; this record is historical."
+      },
+      "voice": {
+        "status": "empty",
+        "value": null,
+        "note": "No account resource supplied."
+      },
+      "style_persona": {
+        "status": "empty",
+        "value": null,
+        "note": "No account resource supplied."
+      },
+      "custom_model": {
+        "status": "empty",
+        "value": null,
+        "note": "No account resource supplied."
+      },
+      "personalize": {
+        "status": "unverified",
+        "value": null,
+        "note": "Account UI not inspected; preserve current setting."
+      },
+      "reference_inputs": {
+        "status": "empty",
+        "value": null,
+        "note": "No source inputs."
+      },
+      "edit_target": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "preserve": {
+        "status": "not_applicable",
+        "value": null,
+        "note": "Not used for this operation."
+      },
+      "sections": {
+        "status": "set",
+        "value": [
+          "Intro",
+          "Theme",
+          "Variation",
+          "Outro"
+        ],
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "target_duration": {
+        "status": "set",
+        "value": "about 3 minutes",
+        "note": "Illustrative suggestion, not an applied Suno setting."
+      },
+      "translation": {
+        "status": "empty",
+        "value": null,
+        "note": "No review translation requested."
+      }
+    },
+    "lyrics": "",
+    "translation": "",
+    "references": [],
+    "assumptions": [
+      "Illustrative fixture. No audio generated or UI inspected."
+    ]
+  }
+]

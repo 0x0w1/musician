@@ -1,0 +1,35 @@
+{
+  "name": "suno-music-skills",
+  "version": "0.3.0",
+  "description": "Suno vocal and instrumental creation, editing handoffs, complete model-aware prompts, and reversible song records.",
+  "author": {
+    "name": "0x0w1"
+  },
+  "repository": "https://github.com/0x0w1/musician",
+  "license": "Apache-2.0",
+  "keywords": [
+    "suno",
+    "music",
+    "songwriting",
+    "lyrics",
+    "instrumental",
+    "prompt-engineering"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Musician",
+    "shortDescription": "Suno songs, instrumentals, and editing prompts",
+    "longDescription": "Prepare complete Suno handoffs for vocal and instrumental music, revise existing songs, and retain full prompt history. Audio generation remains in Suno.",
+    "developerName": "0x0w1",
+    "category": "Productivity",
+    "capabilities": [
+      "Write"
+    ],
+    "websiteURL": "https://github.com/0x0w1/musician",
+    "defaultPrompt": [
+      "Write a Korean song about starting again.",
+      "Make an instrumental for reading at dawn.",
+      "Revise only the chorus of my Suno song."
+    ]
+  }
+}

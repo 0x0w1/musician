@@ -2,7 +2,7 @@
 
 Starting values for **slot 7**. Heuristics, not facts — this file holds *how to choose a number*, so it lives with the rules, not in `suno-reference.md`.
 
-**Status: `[unverified]`.** Adapted from a third-party guide that carries no citations (see `suno-reference.md` Sources). The ranges are plausible and internally consistent, and nothing here has been checked against generated audio. Treat every number as an opening bid the concept is allowed to overrule.
+**Status: heuristic, not audio-tested.** Adapted from a third-party guide that carries no citations ([source library](https://github.com/schwepps/skills)). The ranges are plausible and internally consistent, and nothing here has been checked against generated audio. Treat every number as an opening bid the concept is allowed to overrule.
 
 ---
 
@@ -29,7 +29,7 @@ Rhythmic density belongs in slot 5 for the same reason. Two tracks at 90 BPM, on
 | Creative / brainstorming | 100–120 | Upbeat without pulling attention |
 | Repetitive tasks | 110–130 | Steady, can carry more energy |
 
-Repeat-listening constraint applies on top of this table — see `../suno-instrumental/references/instrumentation-and-performance.md` §4. A focus track that peaks fails at its job every time the peak comes around, whatever its BPM.
+Repeat-listening constraint applies on top of this table — see [arrangement guidance](../skills/suno-instrumental/references/instrumentation-and-performance.md). A recurring peak may distract a focus listener; preserve it if the user wants it.
 
 ## 3. Movement and exercise
 
@@ -84,24 +84,3 @@ Repeat-listening constraint applies on top of this table — see `../suno-instru
 Tempo does not carry emotion independently of genre. A 60 BPM half-time trap beat is not peaceful; a 140 BPM shoegaze wash is not aggressive. Mood is slot 2's job and instrumentation is slot 3's, and both outrank the number. A table that suggests otherwise would push the compiler toward picking a tempo from a feeling, which is backwards: **the use case and the genre pick the tempo, and the mood is stated separately.**
 
 When no use case is given and the concept is purely emotional, take the BPM from the genre preset (`genre-presets.md`) and adjust from there.
-
-## 7. Parked — playlist energy curves
-
-Both skills currently produce **one track at a time**, so these are unused. Kept because they are the part of the source that is hardest to reconstruct, and they become directly usable the day a playlist or album mode exists.
-
-```
-Workout, 30 min
-  warm-up 5m 110-120 → build 3m 130-140 → peak 8m 150-160
-  → active recovery 2m 120 → peak 8m 155-165 → cool-down 4m 90-100 → 70
-
-Running, 45 min
-  warm-up 5m 110-120 → cruise 15m 130-140 → intervals 15m alternating 150/120
-  → return 5m 130 → cool-down 5m 100 → 80
-
-Focus, 2 h
-  30m 70-80 lo-fi → 30m 60-70 ambient → 30m 110-115 minimal techno
-  → 30m 75-85 jazz lo-fi
-
-Event, 3 h
-  arrival 90-100 → main 100-115 → peak 115-125
-```

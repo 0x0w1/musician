@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh -c 'guard=$(git rev-parse --path-format=absolute --git-common-dir 2>/dev/null)/jig/guard-push.sh; [ -f \"$guard\" ] || exit 0; exec sh \"$guard\"'",
+            "statusMessage": "jig guard-push"
+          }
+        ]
+      }
+    ]
+  }
+}

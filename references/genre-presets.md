@@ -1,27 +1,8 @@
 # Genre Presets
 
-Opening slot values for 44 genres. **Starting points, not output.**
+Forty-four optional starting points. **Heuristic, not audio-tested.** Forty rows were adapted in v0.1.1 from [schwepps/skills](https://github.com/schwepps/skills), an uncited third-party library; the East Asian rows were authored here. Similarity to another prompt collection does not verify model behavior.
 
-**Status: `[unverified]`.** Forty of these are decompositions of a third-party genre library (see `suno-reference.md` Sources); four are authored here (§9). None has been checked against generated audio.
-
----
-
-## 1. How to use a preset
-
-A preset fills slots 1, 2, 3, 5, 6, 7 — and slot 4 for the vocal skill — with values that are known to describe the genre. It does not fill them with values that describe *this* track.
-
-1. Load the preset for the nearest genre.
-2. Replace whatever the concept actually determines. A preset that survives untouched means the concept was never resolved (`compiler-rules.md` §2).
-3. **Run the redundancy pass anyway.** Preset descriptors plus concept descriptors is exactly how a synonym-pile forms — `warm` from the preset meeting `warm analog tape` from the concept.
-4. Compile in the profile's version dialect (§3). The cells below are neutral English fragments, not finished strings.
-
-**The source strings put BPM in second position. These tables do not, and neither does the compiler.** Order is weight (`suno-reference.md` §3), and tempo is the least discriminating thing you can say about a track. BPM is slot 7, always last. This is the single most important thing that changed in the decomposition — a pasted source string would have contradicted the rule the compiler is built on.
-
-**The vocal column is slot 4 material for `suno-vocal-song` only.** For `suno-instrumental` it is ignored, and a `—` means the genre is ordinarily instrumental. `singing in <language>` is appended by the skill, not by the preset, except where the genre itself names a language.
-
-**The exclusions column is priority-2 candidates only** — what Suno habitually contaminates this genre with. Priority 1 is whatever the user said they don't want, and it always outranks these (`compiler-rules.md` §4). These entries are inferred from genre convention, not observed from generations; drop any that the concept actually wants, and keep the pairing rule — every exclusion needs a positive replacement in slot 3.
-
----
+Columns map to internal musical decisions, not a mandatory order for Styles. Use a relevant row only when useful, retain what suits the request, and change what does not. Language and voice suggestions never override the user or profile. Exclusions are candidates, not observed model defects; do not exclude requested elements or force replacement instruments. Preserve richer instrumentation or genre blends when requested.
 
 ## 2. Electronic and EDM
 
@@ -92,7 +73,7 @@ A preset fills slots 1, 2, 3, 5, 6, 7 — and slot 4 for the vocal skill — wit
 
 ## 8. French
 
-Note: the source library writes these style strings **in French** (`piano mélancolique`, `voix masculine chaude`). Whether Suno reads a non-English Styles field as well as an English one is untested and §8 of the reference does not cover it — the mandate there is only that `singing in <language>` appear. These presets are given in English; writing them in the target language is an open question worth testing, not a rule.
+French language fragments are examples, not a language override.
 
 | Genre | 1 genre / era | 2 mood | 3 instrumentation | 5 rhythm | 6 production | 7 BPM | 4 vocal | priority-2 excludes |
 |---|---|---|---|---|---|---|---|---|
@@ -102,9 +83,7 @@ Note: the source library writes these style strings **in French** (`piano mélan
 
 ## 9. Authored here — East Asian genres
 
-**Not from the source library.** It covers EDM, rock, hip-hop and French and contains no J-pop, city pop, Korean ballad or Korean indie — which is the entire home territory of a profile whose `default_lyric_language` is Korean, and which the test suite already exercises (`TESTING.md`, vocal test #3 is a J-pop input). These four are written here from genre convention to close that gap.
-
-They carry the same `[unverified]` status as the rest of the file and one additional caveat: they have no third-party corroboration at all.
+These four presets were authored for this package and have not been tested against generated audio.
 
 | Genre | 1 genre / era | 2 mood | 3 instrumentation | 5 rhythm | 6 production | 7 BPM | 4 vocal | priority-2 excludes |
 |---|---|---|---|---|---|---|---|---|
@@ -112,12 +91,3 @@ They carry the same `[unverified]` status as the rest of the file and one additi
 | City pop | 80s city pop | wistful, urbane | electric piano, slap bass, gated drums | laid-back funk groove | analog warmth, wide | 105 | smooth voice, singing in Japanese | trap hi-hats, heavy distortion |
 | Korean ballad | Korean ballad | aching, restrained | piano, strings entering late, live drums | slow, builds to the final chorus | wide reverb | 68 | breathy female alto, belting on the last chorus, singing in Korean | electronic drums, trap hi-hats |
 | Korean indie | Korean indie pop | wistful, unhurried | fingerpicked acoustic guitar, soft electric piano, brushed drums | loose, behind the beat | lo-fi warmth, close | 92 | soft close-miked male, singing in Korean | polished pop production, EDM drops |
-
-## 10. What the presets confirm
-
-Two rules in `compiler-rules.md` had no external support before this file existed. The source library, written independently and to a different philosophy, happens to corroborate both:
-
-- **Instrumentation, 2–4 named instruments.** Essentially every source string names three or four. Not one names more than four.
-- **One dominant genre, at most two blended.** Every source string opens with a single genre, sometimes with an era or a modifier, never with a stack.
-
-This is corroboration, not verification — the source is uncited and may share ancestry with the material already in `suno-reference.md`. But two independently-arrived-at rules agreeing is worth more than either alone.

@@ -5,15 +5,21 @@
   },
   "metadata": {
     "description": "AI music production skills for Suno",
-    "version": "0.2.0"
+    "version": "0.3.0"
   },
   "plugins": [
     {
       "name": "suno-music-skills",
-      "source": "./",
-      "description": "Two focused Suno skills — one for songs with lyrics, one for instrumentals. Turns a one-line idea into a paste-ready Suno prompt set, and keeps every decision revisable.",
+      "source": "./plugins/suno-music-skills",
+      "description": "Suno vocal and instrumental prompts, editing handoffs, and reversible song records.",
       "category": "creative",
-      "tags": ["suno", "music", "songwriting", "lyrics", "instrumental"]
+      "tags": [
+        "suno",
+        "music",
+        "songwriting",
+        "lyrics",
+        "instrumental"
+      ]
     }
   ]
 }
